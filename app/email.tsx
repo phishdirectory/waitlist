@@ -1,6 +1,5 @@
 import {
   Body,
-  Button,
   Container,
   Head,
   Heading,
@@ -18,8 +17,23 @@ const WaitlistEmail = () => {
       <Head />
       <Preview>You're on the phish.directory waitlist</Preview>
       <Tailwind>
-        <Body className="bg-[#f5f5f5] py-[40px] font-sans">
-          <Container className="bg-white mx-auto p-[24px] max-w-[600px] rounded-[8px]">
+        <Body
+          className="py-[40px] font-sans"
+          style={{
+            backgroundImage:
+              "url('https://s3.hogwarts.dev/assets/483388796_18487927669062383_851922503530396268.jpg')",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <Container
+            className="mx-auto p-[24px] max-w-[600px] rounded-[8px]"
+            style={{
+              backgroundColor: "rgba(255, 255, 255, 0.7)",
+              backdropFilter: "blur(10px)",
+            }}
+          >
             <Section className="mb-[32px] text-center">
               <Img
                 src="https://s3.hogwarts.dev/assets/phishdirectory.jpeg"
@@ -46,43 +60,25 @@ const WaitlistEmail = () => {
                 wait to have you on board.
               </Text>
 
-              <Button
-                href="https://phish.directory"
-                className="bg-[#1aa6b8] text-white rounded-[4px] py-[12px] px-[20px] text-[16px] font-medium no-underline text-center block box-border"
+              <div
+                style={{
+                  fontFamily: "cursive",
+                  fontSize: "22px",
+                  color: "#1aa6b8",
+                  marginTop: "32px",
+                  marginBottom: "0",
+                  textAlign: "right",
+                  paddingRight: "16px",
+                }}
               >
-                Learn more about phish.directory
-              </Button>
-
-              <Text className="text-[#55625c] text-[14px] mt-[32px] mb-[12px]">
-                Have questions? Join our Slack community by emailing us at{" "}
-                <a
-                  href="mailto:slack@phish.directory"
-                  className="text-[#83bab4]"
-                >
-                  slack@phish.directory
-                </a>
-              </Text>
-
-              <Text className="text-[14px] mb-[0]">
                 The phish.directory Team
-              </Text>
+              </div>
             </Section>
 
-            <Section className="border-t border-[#f0f0f0] mt-[10px] pt-[10px]">
-              <Text className="text-[#55625c] text-[12px] m-0">
+            <Section className="border-t border-[#f0f0f0] mt-[16px] pt-[16px]">
+              <Text className="text-[#55625c] text-[12px] m-0 text-center">
                 © 2025 phish.directory. All rights reserved.
               </Text>
-              {/* <Text className="text-[#55625c] text-[12px] m-0">
-                123 Security Ave, Warren, US
-              </Text> */}
-              {/* <Text className="text-[#55625c] text-[12px]">
-                <a
-                  href="https://phish.directory/unsubscribe"
-                  className="text-[#1aa6b8] underline"
-                >
-                  Unsubscribe
-                </a>
-              </Text> */}
             </Section>
           </Container>
         </Body>
