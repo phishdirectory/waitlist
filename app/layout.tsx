@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Head from "next/head";
+import Script from "next/script";
 import type React from "react";
 import "./globals.css";
 
@@ -19,13 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <script
-          defer
-          src="https://umami.hogwarts.dev/script.js"
-          data-website-id="09449c2c-634b-48c0-9373-e1e2b978215c"
-        ></script>
-      </Head>
+      <Script
+        defer={true}
+        src="https://umami.hogwarts.dev/script.js"
+        data-website-id="09449c2c-634b-48c0-9373-e1e2b978215c"
+      />
       <body className={inter.className}>{children}</body>
     </html>
   );
