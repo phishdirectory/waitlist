@@ -64,13 +64,13 @@ export default function WaitlistPage() {
       {/* Background image with overlay */}
       <div className="fixed inset-0 z-0">
         <Image
-          src="/images/phish-background.png"
+          src="/images/phish-background-90.jpeg"
           alt="Gradient background"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 backdrop-blur-xs"></div>
       </div>
 
       {/* Content */}
@@ -90,7 +90,7 @@ export default function WaitlistPage() {
             </div>
 
             {/* Content */}
-            <div className="flex-1 space-y-6 text-center lg:text-left">
+            <div className="flex-1 space-y-6 text-center lg:text-left -mt-1">
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-2">
                   phish.directory UI
@@ -103,7 +103,7 @@ export default function WaitlistPage() {
 
               <Badge
                 variant="outline"
-                className="bg-eastern-blue/20 text-white border-eastern-blue px-3 py-1 text-sm"
+                className="bg-eastern-blue/20 text-white border-eastern-blue px-3 pb-1 text-sm"
               >
                 Coming Soon
               </Badge>
@@ -233,7 +233,7 @@ export default function WaitlistPage() {
         </div>
 
         {/* Footer */}
-        <footer className="w-full mt-16 text-center text-sm text-white/70">
+        <footer className="w-full mt-8 text-center text-sm text-white/70">
           <p>
             © {new Date().getFullYear()} phish.directory. All rights reserved.
           </p>
