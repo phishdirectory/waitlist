@@ -9,7 +9,7 @@ if (graphite === null) throw new Error("Graphite host is not configured");
 const metrics = new StatsD({
   host: graphite,
   port: 8125,
-  prefix: `${environment}.phishdirectory.waitlist.`,
+  prefix: `${environment}.phishdirectory.waitlist`,
 });
 
 export default metrics;
